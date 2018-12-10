@@ -5,7 +5,7 @@
 --Queries utilizing the Join command to combine two tables and extract data
 
 --Find all candidates who were interviewed for second round (Round Number = 2)
---Internship position. Show each candidateís details which includes candidate ID,
+--Internship position. Show each candidate‚Äôs details which includes candidate ID,
 --candidate name, phone number, candidate experience, and relevant experience.
 
 SELECT DISTINCT C.CandidateID, C.CLName, C.CPhone, C.CExperience, C.CRelevantExp
@@ -38,7 +38,7 @@ FROM Interview IV RIGHT OUTER JOIN Interviewer I
 ON IV.InterviewerID = I.InterviewerID
 WHERE IV.RoundNumber = 2)
 
---Find all candidates who interviewed for the position ìAdvisory Consultantî. Show
+--Find all candidates who interviewed for the position ‚ÄúAdvisory Consultant‚Äù. Show
 --Candidate details and interview details.
 
 
@@ -97,11 +97,14 @@ SELECT InterviewID, RoundNumber
 FROM Interview 
 ORDER BY RoundNumber DESC
 
---Sort interview by interview date. Show interview ID, Interviewer ID and the interview date
-SELECT InterviewID, InterviewerID, InterviewDate 
-FROM Interview 
+--Sort interview by interview date. Show interview ID, Interviewer ID and the interview date
+
+
+SELECT InterviewID, InterviewerID, InterviewDate 
+FROM Interview 
 ORDER BY InterviewDate DESC
-
+
+
 --For each candidate, calculate the average, min, and max round number of the interviews that this candidate had. Show CandidateId, average Round Number, min
 --Round Number, and max Round Number. 
 
